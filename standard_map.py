@@ -5,7 +5,7 @@ def standard(i, o, k):
     o = (o + i) % (2 * math.pi)
     return i, o
 
-def rng(i, o, n, k=0.971635406, exp=4):
+def rng(i, o, n, k=0.971635, exp=4):
     numbers = []
     try:
         if k <= 0:
@@ -26,8 +26,8 @@ def rng(i, o, n, k=0.971635406, exp=4):
         print(e)
     return numbers[:n]
 
-i = 0.2
-o = 0.10
+i = 0.1
+o = 1.0
 
-numbers = rng(i, o, 20, exp=4)
+numbers = rng(i, o, 100, exp=3)
 list(map(print,numbers))
